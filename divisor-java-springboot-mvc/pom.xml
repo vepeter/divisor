@@ -13,7 +13,7 @@
     <artifactId>divisor-java-springboot-mvc</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>divisor-java-springboot-mvc</name>
-    <description>Demo project for Spring Boot</description>
+    <description>The Divisor Assignment implementation based on Java and Spring MVC</description>
 
     <properties>
         <java.version>11</java.version>
