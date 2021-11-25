@@ -26,7 +26,7 @@ class DivisorSpringbootMvcApplicationTests {
     @Test
     @DisplayName("should respond with proper divisor list with no filtering")
     void testFindDivisors() {
-        ResponseEntity<String> response = restTemplate.getForEntity(String.format("http://localhost:%s/findDivisors/20", applicationPort), String.class);
+        ResponseEntity<String> response = restTemplate.getForEntity(String.format("http://localhost:%s/calculator/findDivisors/20", applicationPort), String.class);
 
         assertAll("response",
                 () -> assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK),
@@ -37,7 +37,7 @@ class DivisorSpringbootMvcApplicationTests {
     @Test
     @DisplayName("should respond with proper divisor list with filtering results")
     void testFindDivisorsWithFiltering() {
-        ResponseEntity<String> response = restTemplate.getForEntity(String.format("http://localhost:%s/findDivisors/30?evenOrOdd=odd", applicationPort), String.class);
+        ResponseEntity<String> response = restTemplate.getForEntity(String.format("http://localhost:%s/calculator/findDivisors/30?evenOrOdd=odd", applicationPort), String.class);
 
         assertAll("response",
                 () -> assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK),

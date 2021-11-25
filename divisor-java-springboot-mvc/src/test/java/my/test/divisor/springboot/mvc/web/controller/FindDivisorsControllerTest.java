@@ -36,7 +36,7 @@ class FindDivisorsControllerTest {
     void testGetDivisorsForGivenNumber() throws Exception {
         given(divisorService.findDivisor(any(), any())).willReturn(List.of(1, 2, 4, 5, 10));
 
-        mockMvc.perform(get("/findDivisors/20"))
+        mockMvc.perform(get("/calculator/findDivisors/20"))
                 .andExpect(status().isOk())
                 .andExpect(content().json("{\"results\":[1,2,4,5,10]}"));
 
@@ -48,7 +48,7 @@ class FindDivisorsControllerTest {
     void testGetDivisorsForGivenNumberWithFilterValue() throws Exception {
         given(divisorService.findDivisor(any(), any())).willReturn(List.of(1, 2, 4, 5, 10));
 
-        mockMvc.perform(get("/findDivisors/20").param("evenOrOdd", ""))
+        mockMvc.perform(get("/calculator/findDivisors/20").param("evenOrOdd", ""))
                 .andExpect(status().isOk())
                 .andExpect(content().json("{\"results\":[1,2,4,5,10]}"));
 
@@ -60,7 +60,7 @@ class FindDivisorsControllerTest {
     void testGetDivisorsForGivenNumberWithFilter() throws Exception {
         given(divisorService.findDivisor(any(), any())).willReturn(List.of(2, 4, 10));
 
-        mockMvc.perform(get("/findDivisors/20").param("evenOrOdd", "eVeN"))
+        mockMvc.perform(get("/calculator/findDivisors/20").param("evenOrOdd", "eVeN"))
                 .andExpect(status().isOk())
                 .andExpect(content().json("{\"results\":[2,4,10]}"));
 
