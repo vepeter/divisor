@@ -66,3 +66,12 @@ The application can be requested then bu the following url:
 ```shell
 http://localhost:8080/findDivisors/20
 ```
+A Docker image for the project (with the `latest` tag) is generated when the following command is executed:
+(in Linux or Mac)
+```shell
+./mvnw install -Pdocker
+```
+(in Windows)
+```shell
+mvnw install -Pdocker
+```
