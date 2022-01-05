@@ -7,11 +7,11 @@ The projects show that Kotlin is very similar to Java and easily used for implem
 The project requires JDK 11 installed locally.
 
 ## Main tools/libraries used
-* Kotlin 1.6.0
-* Spring Boot 2.6.0
+* Kotlin 1.6.10
+* Spring Boot 2.6.2
 * Swagger
 * JUnit 5
-* Mockito
+* Mockk
 * Spring Boot Test
 * Gradle
 
